@@ -7,7 +7,7 @@ import seaborn as sn
 import haversine as hs
 from haversine import Unit
 
-G = nx.random_geometric_graph(20, 0.3)
+G = nx.random_geometric_graph(10, 0.3)
 pos = nx.get_node_attributes(G, "pos")
 dmin = 1
 ncenter = 0
@@ -79,7 +79,7 @@ distance = df1
 distances = dict( ((l1,l2), distance.iloc[l1, l2] ) for l1 in locations for l2 in locations if l1!=l2)
 
 
-V = 4
+V = 3
 prob=LpProblem("vehicle", LpMinimize)
 indicator = LpVariable.dicts('indicator',distances, 0,1,LpBinary)
 eliminator = LpVariable.dicts('eliminator', df.ID, 0, len(df.ID)-1, LpInteger)
@@ -101,7 +101,7 @@ for i in df.ID:
             prob += eliminator[i] - eliminator[j] <= (num)*(1-indicator[(i,j)]) - 1
             
             
-
+prob.solve()
 
 feasible_edges = [ e for e in indicator if value(indicator[e]) != 0 ]
 
