@@ -60,8 +60,9 @@ pip install pandas numpy pulp networkx haversine matplotlib
 ```
 This file uses synthetic graphs (which are in the form of Random Geometric Graphs RGG) as its input and prints the routes that can be taken by 'V' vehicles. In addition to the route paths for each vehicle this code also indicates whether or not there is an optimal solution given a synthetic graph and if there isn't one, it prints "infeasible solution". 
 It also generates the enumerated nodes, total number of iterations, time taken in terms  of CPU seconds and wall clock seconds.
-Running [LPRoute.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/LPRoute.py)  
 Once the required tools are installed, you can edit the number of vehicles to be deployed in this file by changing the value of 'V'.
+
+Running [LPRoute.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/LPRoute.py)  
 To run this file, enter the following in command line
 ```
 python LPRoute.py
@@ -85,7 +86,6 @@ python Evaluation.py
 After running, first you will see the synthetic graph that is created. After closing that, the model will start running and will give you the output in the form of another figure, in which you will see the paths that connect all the nodes with their coordinates. After this, you will then see the evaluation model being run.This evaluation is done with the help of Google's OR-Tools. At the end, you will see the paths that were evaluated using OR-Tools. You can see the paths created from our model as well.
 This code is running both our model and Google's model on the same synthetic graph.
 For graphs and figures that explain more about results, see Evaluation-Results.ipynb which can be found in the Jupyter_Notebook folder in the parent directory.
-
 To see these paths and outputs in more detail, see Routes with synthetic graph.ipynb which can be found in the Jupyter_Notebook folder in the parent directory.
 
 
@@ -96,6 +96,7 @@ pip install folium os base64
 This file uses json file stored in the AdditionalFiles folder and makes a route for the given coordinates. The route connecting the nodes will be highlighted on the map along with the starting point saved a marker. 
 Once the required tools are installed, you can edit the coordinates passed to this file by changing the value of 'routeData' and appending a different CSV file to it. 
 
+Running [routes_geoJson.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/routes_geoJson.py)
 To run this file, enter the following in command line
 ```
 python routes_geoJson.py
