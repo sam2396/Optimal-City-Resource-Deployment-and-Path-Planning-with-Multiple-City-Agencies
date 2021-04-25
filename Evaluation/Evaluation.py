@@ -9,7 +9,7 @@ from haversine import Unit
 from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver import pywrapcp
 
-G = nx.random_geometric_graph(10, 0.3)
+G = nx.random_geometric_graph(15, 0.3)
 pos = nx.get_node_attributes(G, "pos")
 dmin = 1
 ncenter = 0
@@ -81,7 +81,7 @@ distance = df1
 distances = dict( ((l1,l2), distance.iloc[l1, l2] ) for l1 in locations for l2 in locations if l1!=l2)
 
 
-V = 3
+V = 5
 prob=LpProblem("vehicle", LpMinimize)
 indicator = LpVariable.dicts('indicator',distances, 0,1,LpBinary)
 eliminator = LpVariable.dicts('eliminator', df.ID, 0, len(df.ID)-1, LpInteger)
@@ -144,7 +144,7 @@ def create_data_model():
     data = {}
     data['distance_matrix'] = distance
        
-    data['num_vehicles'] = 3
+    data['num_vehicles'] = 5
     data['depot'] = 7
     return data
 
