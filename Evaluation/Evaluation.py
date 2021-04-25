@@ -4,7 +4,7 @@
 #  To run this file, type Evaluation.py in cmd
 #  After running, first you will see the synthetic graph that is created. After closing that, the model will 
 #  start running and will give you the output in the form of another figure, in which you will see the paths that
-#  connect all the nodes with their coordinates. After this, you will then see evaluation model beinf run.
+#  connect all the nodes with their coordinates. After this, you will then see evaluation model being run.
 #  This evaluation is done with the help of Google's OR-Tools. At the end, you will see the paths that
 #  were evaluated using OR-Tools. You can see the paths created from our model as well.
 #  This code is running both our model and Google's model on the same synthetic graph.
@@ -116,9 +116,9 @@ distances = dict( ((l1,l2), distance.iloc[l1, l2] ) for l1 in locations for l2 i
 V = 3
 ## prob: This initializes the problem that will run using provided constraints.
 prob=LpProblem("vehicle", LpMinimize)
-## indicator: This defines the variable dictionary consisting of distances.
+## indicator: This defines the variable dictionary consisting of distances and indicates if location i is connected to location j along route
 indicator = LpVariable.dicts('indicator',distances, 0,1,LpBinary)
-## eliminator: This defines the variable dictionary consisting of the node ID's.
+## eliminator: This defines the variable dictionary consisting of the node ID's and elimiate subtours
 eliminator = LpVariable.dicts('eliminator', df.ID, 0, len(df.ID)-1, LpInteger)
 ## cost: This stores the result of distances calculations.
 cost = lpSum([indicator[(i,j)]*distances[(i,j)] for (i,j) in distances])
@@ -157,7 +157,7 @@ routes = [ [e] for e in routes ]
 for r in routes:
     while r[-1][1] !=7:
         r.append(get_next_loc(r[-1][1])[-1])
-# coloured_loc: This stores information accroding to individual paths.        
+## coloured_loc: This stores information according to individual paths.        
 coloured_loc = [np.random.rand(3) for i in range(len(routes))]
 for r,co in zip(routes,coloured_loc):
     for a,b in r:
@@ -216,8 +216,8 @@ def main():
     # Create Routing Model.
     routing = pywrapcp.RoutingModel(manager)
     # Create and register a transit callback.
+    ##Returns the distance between the two nodes.
     def distance_callback(from_index, to_index):
-        """Returns the distance between the two nodes."""
         # Convert from routing variable Index to distance matrix NodeIndex.
         from_node = manager.IndexToNode(from_index)
         to_node = manager.IndexToNode(to_index)
