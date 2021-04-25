@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="177ef2b5-26c1-423b-bc18-434b3568fa75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Synthetic Graphs/Extracted Node Co-ordinates.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Synthetic Graphs/Extracted Node Co-ordinates.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cordinate_distances/Coodinate_distances.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../cordinate_distances/Coodinate_distances.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cordinate_positions/Coordinates and Positions.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../cordinate_positions/Coordinates and Positions.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Route trial-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Route trial.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routes with synthetic graph.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Routes with synthetic graph.ipynb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1rQwBfl1QuFmFPzh7cYNTVRxhv3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="177ef2b5-26c1-423b-bc18-434b3568fa75" name="Default Changelist" comment="" />
+      <created>1618921489001</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618921489001</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
