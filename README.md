@@ -54,23 +54,22 @@ Generates paths based on synthetic graphs and number of vehicles
 OP-Routes requires [Python](https://www.python.org/downloads/)  3.5+ to run.
 Extract the zipped files
 
-To run [LPRoute.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/LPRoute.py)  
-Install the following:
-
+Install the following for [LPRoute.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/LPRoute.py) 
 ```
 pip install pandas numpy pulp networkx haversine matplotlib
 ```
 This file uses synthetic graphs (which are in the form of Random Geometric Graphs RGG) as its input and prints the routes that can be taken by 'V' vehicles. In addition to the route paths for each vehicle this code also indicates whether or not there is an optimal solution given a synthetic graph and if there isn't one, it prints "infeasible solution". 
 It also generates the enumerated nodes, total number of iterations, time taken in terms  of CPU seconds and wall clock seconds.
 Running [LPRoute.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/LPRoute.py)  
-Once the required tools are installed, you can edit the number of vehicles to be deployed in this file by changing the value of 'V' or just run it on any python editor or using command line 
+Once the required tools are installed, you can edit the number of vehicles to be deployed in this file by changing the value of 'V'.
+To run this file, enter the following in command line
 ```
 python LPRoute.py
 ```
 To see these paths and outputs in more detail, see Routes with synthetic graph.ipynb which can be found in the Jupyter_Notebook folder in the parent directory.
 
-To run [Evaluation.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/Evaluation.py)  
-Install the following:
+
+Install the following for [Evaluation.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/Evaluation.py)
 
 ```
 pip install pandas numpy pulp networkx haversine matplotlib ortools
@@ -87,14 +86,11 @@ After running, first you will see the synthetic graph that is created. After clo
 This code is running both our model and Google's model on the same synthetic graph.
 For graphs and figures that explain more about results, see Evaluation-Results.ipynb which can be found in the Jupyter_Notebook folder in the parent directory.
 
-
- 
-
 To see these paths and outputs in more detail, see Routes with synthetic graph.ipynb which can be found in the Jupyter_Notebook folder in the parent directory.
 
-To run [routes_geoJson.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/routes_geoJson.py)
-Install the following:
 
+Install the following for [routes_geoJson.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/routes_geoJson.py)
+Install the following:
 ```
 pip install folium os base64
 ```
@@ -102,7 +98,7 @@ This file uses json file stored in the AdditionalFiles folder and makes a route 
 
 Running [routes_geoJson.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/routes_geoJson.py)
 Once the required tools are installed, you can edit the coordinates passed to this file by changing the value of 'routeData' and appending a different CSV file to it. 
-To run the file from a command prompt window, use the following command
+To run this file, enter the following in command line
 ```
 python routes_geoJson.py
 ```
