@@ -1,5 +1,5 @@
 ##
-# Name of the file: LPRoute.py
+## Name of the file: LPRoute.py
 # The setup:
 # install pands, numpy, pulp, networkx, matplotlib, haversine using 'pip install'.
 # LPRoute.py generates paths for 'V' number of vehicles to be deployed given nodes
@@ -21,11 +21,10 @@ import networkx as nx
 import pandas as pd
 import numpy as np
 from pulp import *
-
 import haversine as hs
 
 
-# To Generate a Synthetic graph
+## To Generate a Synthetic graph
 # with 10 nodes having a density of 0.3
 # storing the random geometric graph in G.
 G = nx.random_geometric_graph(10, 0.3)
@@ -38,7 +37,7 @@ ncenter = 0
 for n in pos:
     ## x,y : are the cordinate positons for a node.
     x, y = pos[n]
-    ## d: distance formula used between point (0.5,0.5)  and (x,y).
+    ## d: stores the distance using the distance formula used between point (0.5,0.5)  and (x,y).
     d = (x - 0.5) ** 2 + (y - 0.5) ** 2
     if d < dmin:
         ncenter = n
@@ -99,7 +98,7 @@ for _,row in df.iterrows():
 ## distances_df: This slices the original dataframe for information from columns 4-4183 which
 ## includes cordinate infromation and their unique indexes.
 distances_df=df.iloc[:,4:4183]
-#distances_df.index=df.ID.
+## distances_df.index=df.ID.
 distances_df.insert(0, 'ID', df.ID)
 
 dist_dict={}
@@ -109,7 +108,7 @@ locations = dict( ( ID, (df.loc[ID, 'Left'], df.loc[ID, 'Right']) ) for ID in df
 locations
 
 for l in locations:
-    #lo: This stores a single location from the dictionary being dealt with at a time.
+    ## lo: This stores a single location from the dictionary being dealt with at a time.
     lo = locations[l]
     plt.plot(lo[0],lo[1],'o')
     plt.text(lo[0]+.01,lo[1],l,horizontalalignment='center',verticalalignment='center')    
@@ -122,7 +121,7 @@ df1 = df1.drop(['Left'],axis=1)
 df1 = df1.drop(['Right'],axis=1)
 df1 = df1.drop(['coordinate'],axis=1)
 df1 = df1.drop(['ID'],axis=1)
-#distance: Stores values left in dataframe df1.
+## distance: Stores values left in dataframe df1.
 distance = df1
 ## distances: is a ditionary used to store distances from each node to all the other nodes in the graph.
 distances = dict( ((l1,l2), distance.iloc[l1, l2] ) for l1 in locations for l2 in locations if l1!=l2)
@@ -182,7 +181,7 @@ for r in routes:
         r.append(get_next_loc(r[-1][1])[-1])
 
 ## coloured_loc: This stores information for node paths seperated with different colours to indicate seperate paths
-## taken by each path.
+## taken by each path outlining these routes.
 coloured_loc = [np.random.rand(3) for i in range(len(routes))]
 for r,co in zip(routes,coloured_loc):
     for a,b in r:
