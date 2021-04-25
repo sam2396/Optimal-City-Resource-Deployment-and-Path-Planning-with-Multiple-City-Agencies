@@ -95,9 +95,9 @@ Install the following:
 pip install folium os base64
 ```
 This file uses json file stored in the AdditionalFiles folder and makes a route for the given coordinates. The route connecting the nodes will be highlighted on the map along with the starting point saved a marker. 
-
-Running [routes_geoJson.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/routes_geoJson.py)
 Once the required tools are installed, you can edit the coordinates passed to this file by changing the value of 'routeData' and appending a different CSV file to it. 
+Running [routes_geoJson.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/routes_geoJson.py)
+
 To run this file, enter the following in command line
 ```
 python routes_geoJson.py
